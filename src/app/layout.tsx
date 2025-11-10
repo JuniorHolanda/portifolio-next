@@ -1,19 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from 'next';
+import { Tac_One, JetBrains_Mono } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/registry';
-import { GlobalStyle } from "@/styles/styles";
-import { ThemeProviderWrapper } from "@/providers/ThemeProvider";
-import HeaderDesktop from "@/components/Headers/HeaderDesktop";
+import { ThemeProviderWrapper } from '@/providers/ThemeProvider';
+import HeaderDesktop from '@/components/Headers/HeaderDesktop';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const jetBrains = JetBrains_Mono({
+  variable: '--font-text',
+  subsets: ['latin'],
+  style: ['italic', 'normal'],
+  weight: ['100', '200', '300', '600', '800'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const tacOne = Tac_One({
+  variable: '--font-title',
+  subsets: ['latin'],
+  style: 'normal',
+  weight: '400',
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${jetBrains.variable} ${tacOne.variable}`}>
         <StyledComponentsRegistry>
           <ThemeProviderWrapper>
             <HeaderDesktop />

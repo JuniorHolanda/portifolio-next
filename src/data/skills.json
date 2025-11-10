@@ -1,0 +1,14 @@
+[
+    {
+        "skill" : "typeSript",
+        "stack" : "principal",
+        "description" : "lorem ipsun dolor, virgulesatmosferi,sandubiache mostarde.",
+        "certification" : [
+            {
+                "title" : "link aqui"
+            }
+        ],
+        "icon" : "/icons/typescript.svg"
+
+    }
+]

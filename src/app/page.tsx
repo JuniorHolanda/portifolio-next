@@ -1,9 +1,13 @@
+import HeroSection from "@/components/HeroSection";
+import { SMain } from "./page.styles";
+import HardSkills from "@/components/HardSkills";
 
 export default function Home() {
 
   return (
-    <div>
-      <h1>ola mundo.</h1>
-    </div>
+    <SMain>
+      <HeroSection />
+      <HardSkills />
+    </SMain>
   );
 }
