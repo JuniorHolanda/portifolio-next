@@ -1,14 +1,33 @@
 [
-    {
-        "skill" : "typeSript",
-        "stack" : "principal",
-        "description" : "lorem ipsun dolor, virgulesatmosferi,sandubiache mostarde.",
-        "certification" : [
-            {
-                "title" : "link aqui"
-            }
-        ],
-        "icon" : "/icons/typescript.svg"
+  {
+    "id": "0",
+    "skill": "typeSript",
+    "stack": "principal",
+    "description": "lorem ipsun dolor, virgulesatmosferi,sandubiache mostarde.",
+    "certification": [
+      {
+        "title": "link aqui"
+      },
+      {
+        "title": "link aqui"
+      },
+      {
+        "title": "link aqui"
+      }
+    ],
+    "icon": "/icons/typescript.svg"
+  },
 
-    }
+  {
+    "id": "1",
+    "skill": "javaScript",
+    "stack": "dados",
+    "description": "lorem ipsun dolor, virgulesatmosferi,sandubiache mostarde.",
+    "certification": [
+      {
+        "title": "link aqui"
+      }
+    ],
+    "icon": "/icons/typescript.svg"
+  }
 ]

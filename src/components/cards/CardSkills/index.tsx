@@ -2,7 +2,21 @@ import { GiDiploma } from "react-icons/gi";
 import { SContainerAction, ScontainerIcon, SContent, SIconTypeScript, SSymbolGear, SWrapper } from "./cardsskills.styles";
 import { FaArrowRight, FaStarOfLife } from "react-icons/fa";
 
-export default function CardSkills() {
+type CardSkillsProps = {
+    id: string;
+    skill: string;
+    stack: string;
+    description: string;
+    certification: {
+        title: string;
+    }[];
+    icon: string;
+};
+
+export default function CardSkills({ ...props }: CardSkillsProps) {
+
+    const allcertification = props.certification.length;
+
     return (
         <SWrapper>
             <SSymbolGear />
@@ -10,13 +24,13 @@ export default function CardSkills() {
                 <SIconTypeScript />
             </ScontainerIcon>
             <SContent>
-                <h2>TypeScript</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2>{props.skill}</h2>
+                <p>{props.description}</p>
             </SContent>
             <SContainerAction>
                 <div>
                     <FaStarOfLife />
-                    <p>Certificações</p>
+                    <p>{`${allcertification} ${allcertification > 0 ? 'certificados' : 'certificado'}`}</p>
                 </div>
                 <button>
                     <FaArrowRight />
