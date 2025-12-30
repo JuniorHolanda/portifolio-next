@@ -1,6 +1,8 @@
 import { GiDiploma } from "react-icons/gi";
-import { SContainerAction, ScontainerIcon, SContent, SIconTypeScript, SSymbolGear, SWrapper } from "./cardsskills.styles";
+import { SContainerAction, ScontainerIcon, SContent, SSymbolGear, SWrapper } from "./cardsskills.styles";
 import { FaArrowRight, FaStarOfLife } from "react-icons/fa";
+import { iconsMap } from "@/utils/iconsMap";
+
 
 type CardSkillsProps = {
     id: string;
@@ -8,20 +10,27 @@ type CardSkillsProps = {
     stack: string;
     description: string;
     certification: {
-        title: string;
+        title?: string;
     }[];
-    icon: string;
 };
 
 export default function CardSkills({ ...props }: CardSkillsProps) {
 
     const allcertification = props.certification.length;
 
+    const IconSkill = iconsMap[props.skill]
+
     return (
         <SWrapper>
             <SSymbolGear />
             <ScontainerIcon>
-                <SIconTypeScript />
+                {
+                    IconSkill ? (
+                        <IconSkill className="iconSkill" />
+                    ) : (
+                        <span>?</span>
+                    )
+                }
             </ScontainerIcon>
             <SContent>
                 <h2>{props.skill}</h2>

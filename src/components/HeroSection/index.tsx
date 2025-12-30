@@ -1,9 +1,11 @@
 'use client';
 
 import Link from "next/link";
-import { SAside, ScontainerImg, ScontainerProfile, SContainerSocial, Scontent, Ssection, SWrapper } from "./heroSection.styles";
+import { SAside, SContainerFrontEndBar, ScontainerImg, ScontainerProfile, SContainerSocial, Scontent, SWrapper } from "./heroSection.styles";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useThemeContext } from "@/hooks/useThemeContext";
+import FrontEndBar from "../FrontEndBar";
+import NavMain from "../NavMain";
 
 export default function HeroSection() {
 
@@ -31,21 +33,34 @@ export default function HeroSection() {
                         </Link>
                     </SContainerSocial>
                 </ScontainerProfile>
+                <SContainerFrontEndBar>
+                    <FrontEndBar />
+                    <FrontEndBar />
+                </SContainerFrontEndBar>
             </SAside>
-            <Ssection>
-                <Scontent>
-                    <h1>
-                        .Sobre{'{'}
-                    </h1>
+
+            <Scontent>
+                <h1>
+                    .Sobre{'{'}
+                </h1>
+                <div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non iusto nisi, velit recusandae ratione voluptates, explicabo cupiditate magni, necessitatibus repudiandae. Totam officiis sunt atque nobis aliquid dolorum pariatur illo?
+                        Olá! Sou Geraldo Pedro, desenvolvedor Front-End desde 2022. Iniciei minha jornada estudando <strong>HTML, CSS e JavaScript</strong> e, desde então, mantenho uma rotina constante de aprendizado e evolução na área.
                     </p>
-                    <h2>
-                        {'}'}
-                    </h2>
-                    <img src={`${theme.themeMode}BrutalSymbolBg.png`} alt="um símbolo abstrato brtalista amarelo" />
-                </Scontent>
-            </Ssection>
+                    <p>
+                        Hoje me especializo em <strong>React, Next.js, TypeScript e Styled-Components</strong>, além de estudar fundamentos de back-end, como <strong>bancos de dados e criação de APIs.</strong>
+                    </p>
+                    <p>
+                        Com <strong>15 anos de experiência como designer</strong>, trago uma visão que complementa minha atuação técnica. Essa bagagem me permite criar interfaces modernas e de grande apelo visual.
+                    </p>
+                </div>
+                <h2>
+                    {'}'}
+                </h2>
+                <img src={`${theme.themeMode}BrutalSymbolBg.png`} alt="um símbolo abstrato brtalista amarelo" />
+                <NavMain />
+            </Scontent>
+
         </SWrapper>
     )
 }

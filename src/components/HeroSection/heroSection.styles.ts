@@ -6,17 +6,22 @@ import styled from 'styled-components';
 export const SWrapper = styled.section`
   ${flex({ align: 'flex-start' })}
   width: 100%;
-  height: 95vh;
 `;
 
 export const SAside = styled.aside`
-  ${flex({ direction: 'column' })};
+  position: relative;
+  ${flex({ direction: 'column', align: 'flex-end' })};
   background-color: ${({ theme }) => theme.colors.secondary};
   height: 100%;
-  width: 20%;
+  width: 25%;
+  min-width: 350px;
 `;
 
 export const ScontainerProfile = styled.div`
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
   ${flex({ direction: 'column' })};
   width: 60%;
   height: 40%;
@@ -55,10 +60,11 @@ export const SContainerSocial = styled.div`
   }
 `;
 
-export const Ssection = styled.section`
-  ${flex({ direction: 'column' })}
-  width: 80%;
-  height: 100%;
+export const SContainerFrontEndBar = styled.div`
+  height: 100vh;
+  width: 10%;
+  background-color: ${({ theme }) => theme.colors.text};
+  overflow: hidden;
 `;
 
 export const Scontent = styled.div`
@@ -66,11 +72,14 @@ export const Scontent = styled.div`
   ${flex({ align: 'flex-start', direction: 'column' })}
   position: relative;
   height: 100vh;
+  width: 75%;
+  overflow: hidden;
 
   img {
     position: absolute;
     transform: translateX(-50%);
     width: 40%;
+    min-width: 500px;
     bottom: 0;
     left: 60%;
     z-index: 0;
@@ -83,10 +92,23 @@ export const Scontent = styled.div`
     color: ${({ theme }) => theme.colors.title};
   }
 
-  p {
-    ${fontSmallText}
-    z-index: 1;
-    width: 30%;
-    color: ${({ theme }) => theme.colors.text};
+  div {
+    ${flex({ direction: 'column' })}
+    gap: ${({ theme }) => theme.spaces.medium};
+    width: 50%;
+
+    p {
+      ${fontSmallText}
+      z-index: 1;
+      min-width: 200px;
+      color: ${({ theme }) => theme.colors.text};
+      margin-left: ${({ theme }) => theme.spaces.medium};
+
+      strong {
+        background-color: ${({ theme }) => theme.colors.primary};
+        padding: 0 5px;
+        border-radius: ${({ theme }) => theme.borderRadios.small};
+      }
+    }
   }
 `;

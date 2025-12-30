@@ -1,33 +1,266 @@
 [
   {
-    "id": "0",
-    "skill": "typeSript",
+    "id": "0p",
+    "skill": "typeScript",
     "stack": "principal",
-    "description": "lorem ipsun dolor, virgulesatmosferi,sandubiache mostarde.",
-    "certification": [
-      {
-        "title": "link aqui"
-      },
-      {
-        "title": "link aqui"
-      },
-      {
-        "title": "link aqui"
-      }
-    ],
-    "icon": "/icons/typescript.svg"
+    "description": "Um superset tipado de Javascript",
+    "certification": []
   },
 
   {
-    "id": "1",
-    "skill": "javaScript",
-    "stack": "dados",
-    "description": "lorem ipsun dolor, virgulesatmosferi,sandubiache mostarde.",
+    "id": "2p",
+    "skill": "styledComponents",
+    "stack": "principal",
+    "description": "biblioteca para componentizar o css",
+    "certification": []
+  },
+
+  {
+    "id": "3p",
+    "skill": "nodeJs",
+    "stack": "principal",
+    "description": "Ambiente de execução javascript ",
     "certification": [
       {
-        "title": "link aqui"
+        "title": "Node.js e terminal:",
+        "subTitle": "Dominando o ambiente de desenvolvimento front-end",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/node-js-terminal-ambiente-desenvolvimento-front-end/formalCertificate"
       }
-    ],
-    "icon": "/icons/typescript.svg"
+    ]
+  },
+
+  {
+    "id": "4p",
+    "skill": "react",
+    "stack": "principal",
+    "description": "Biblioteca para interfaces web",
+    "certification": [
+      {
+        "title": "React",
+        "subTitle": "configurando e estruturando projetos com Vite",
+        "link": "https://cursos.alura.com.br/certificate/5030fb41-4e56-438b-8252-b62abf3545e8"
+      },
+      {
+        "title": "React, componentes",
+        "subTitle": "construindo componentes com JSX",
+        "link": "https://cursos.alura.com.br/certificate/5030fb41-4e56-438b-8252-b62abf3545e8"
+      }
+    ]
+  },
+
+  {
+    "id": "5p",
+    "skill": "scss",
+    "stack": "principal",
+    "description": "a forma moderna de escrever css",
+    "certification": [
+      {
+        "title": "SASS com Vite",
+        "subTitle": "otimizando e modularizando seu CSS",
+        "link": "https://cursos.alura.com.br/certificate/b9553676-b437-43f4-ad1b-44c522660731"
+      }
+    ]
+  },
+
+  {
+    "id": "6p",
+    "skill": "gitHub",
+    "stack": "principal",
+    "description": "plataforma de vercionamento de códigos",
+    "certification": [
+      {
+        "title": "Git e GitHub",
+        "subTitle": "Compartilhando e colaborando em projetos",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/git-github-compartilhando-colaborando-projetos/formalCertificate"
+      }
+    ]
+  },
+
+  {
+    "id": "1f",
+    "skill": "html",
+    "stack": "fundamentos",
+    "description": "linguagem de marcação para desenvolvimento web",
+    "certification": [
+      {
+        "title": "html e css",
+        "subTitle": "Ambientes de desenvolvimento, estrutura de arquivos e tags",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-ambiente-arquivos-tags/formalCertificate"
+      },
+      {
+        "title": "html e css, tags",
+        "subTitle": "cabeçalho, footer e variáveis CSS",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-cabecalho-footer-variaveis-css/formalCertificate"
+      },
+      {
+        "title": "html e css, classes",
+        "subTitle": "classes, posicionamento e Flexbox",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-classes-posicionamento-flexbox/formalCertificate"
+      },
+      {
+        "title": "html e css, praticando",
+        "subTitle": "praticando html e css",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-praticando-html-css/formalCertificate"
+      },
+      {
+        "title": "html e css, publicação",
+        "subTitle": "trabalhando com responsividade e publicação de projetos",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-responsividade-publicacao-projetos/formalCertificate"
+      }
+    ]
+  },
+
+  {
+    "id": "2f",
+    "skill": "css",
+    "stack": "fundamentos",
+    "description": "linguagem de estilo usada para estilizar e organizar páginas da web",
+    "certification": [
+      {
+        "title": "html e css",
+        "subTitle": "Ambientes de desenvolvimento, estrutura de arquivos e tags",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-ambiente-arquivos-tags/formalCertificate"
+      },
+      {
+        "title": "html e css, variáveis",
+        "subTitle": "cabeçalho, footer e variáveis css",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-cabecalho-footer-variaveis-css/formalCertificate"
+      },
+      {
+        "title": "html e css, flexbox",
+        "subTitle": "classes, posicionamento e flexbox",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-classes-posicionamento-flexbox/formalCertificate"
+      },
+      {
+        "title": "html e css, praticando",
+        "subTitle": "praticando html e css",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-praticando-html-css/formalCertificate"
+      },
+      {
+        "title": "html e css, responsividade",
+        "subTitle": "trabalhando com responsividade e publicação de projetos",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/html-css-responsividade-publicacao-projetos/formalCertificate"
+      }
+    ]
+  },
+
+  {
+    "id": "3f",
+    "skill": "javascript",
+    "stack": "fundamentos",
+    "description": "linguagem de programação de alto nível. utilizada no desenvolvimento web",
+    "certification": [
+      {
+        "title": "javaScript e HTML:",
+        "subTitle": "Desenvolva um jogo e pratique lógica de programação",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/logica-programacao-javascript-html/certificate"
+      },
+      {
+        "title": "javaScript para Web:",
+        "subTitle": "Crie páginas dinâmicas",
+        "link": "https://cursos.alura.com.br/certificate/6cf1db42-3ed0-484f-afb2-a9b05e43dafc"
+      },
+      {
+        "title": "javaScript, classes e heranças:",
+        "subTitle": "classes e heranças no desenvolvimento de aplicações com orientação a objetos",
+        "link": "https://cursos.alura.com.br/formalCertificate/9c470e12-f528-47cd-a8e6-ad8ec3c8e4c4"
+      },
+      {
+        "title": "javaScript, localStorage:",
+        "subTitle": "explorando a manipulação de elementos e da localStorage",
+        "link": "https://cursos.alura.com.br/certificate/2b30be54-c263-499b-8371-cfed85258e4f"
+      },
+      {
+        "title": "javaScript: array",
+        "subTitle": "manipulando elementos no DOM",
+        "link": "https://cursos.alura.com.br/certificate/25dbd0d7-167b-4789-a761-492168e43e9e"
+      },
+      {
+        "title": "JavaScript:",
+        "subTitle": "validações e reconhecimento de voz",
+        "link": "https://cursos.alura.com.br/certificate/047b0db4-f0c0-48ea-b365-e01c23d7cb9b"
+      },
+      {
+        "title": "Lógica de programação:",
+        "subTitle": "mergulhe em programação com JavaScript",
+        "link": "https://cursos.alura.com.br/certificate/8a580658-944b-45e4-bb98-39693c7a08c1"
+      }
+    ]
+  },
+
+  {
+    "id": "1d",
+    "skill": "mongoose",
+    "stack": "dados",
+    "description": "Modelagem de objetos MongoDB em nodeJs",
+    "certification": []
+  },
+
+  {
+    "id": "2d",
+    "skill": "mongoDb",
+    "stack": "dados",
+    "description": "Banco de dados não relacional",
+    "certification": []
+  },
+
+  {
+    "id": "1dp",
+    "skill": "vercel",
+    "stack": "deploy",
+    "description": "plataforma de deploy rápida para sites e apps, focada em performance, escalabilidade e experiência do desenvolvedor.",
+    "certification": []
+  },
+
+  {
+    "id": "2dp",
+    "skill": "render",
+    "stack": "deploy",
+    "description": "plataforma para deploy de api",
+    "certification": []
+  },
+
+  {
+    "id": "u1",
+    "skill": "figma",
+    "stack": "design/ui",
+    "description": "aplicativo de prototipagem de interfaces",
+    "certification": [
+      {
+        "title": "ui design",
+        "subTitle": "mergulhando nas interfaces digitais",
+        "link": "https://cursos.alura.com.br/user/juniorholanda/course/ui-design-mergulhando-interfaces-digitais/formalCertificate"
+      }
+    ]
+  },
+
+  {
+    "id": "u2",
+    "skill": "photoshop",
+    "stack": "design/ui",
+    "description": "software de edição de imagens",
+    "certification": []
+  },
+
+  {
+    "id": "u3",
+    "skill": "illustrator",
+    "stack": "design/ui",
+    "description": "software de criação de gráficos vetoriais",
+    "certification": []
+  },
+  {
+    "id": "u4",
+    "skill": "aftereffects",
+    "stack": "design/ui",
+    "description": "software de pós produção de vídeos e motion design",
+    "certification": []
+  },
+  {
+    "id": "u5",
+    "skill": "fotografia",
+    "stack": "design/ui",
+    "description": "na maioria dos meus projetos uso fotografias que eu mesmo faço.",
+    "certification": []
   }
 ]

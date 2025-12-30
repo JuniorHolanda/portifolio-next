@@ -58,6 +58,11 @@ export const ScontainerIcon = styled.span`
   z-index: 1;
   width: 100%;
   height: fit-content;
+
+  .iconSkill {
+    fill: ${({ theme }) => theme.colors.secondary};
+    z-index: 1;
+  }
 `;
 
 export const SContent = styled.span`
@@ -66,10 +71,6 @@ export const SContent = styled.span`
   height: 100%;
 `;
 
-export const SIconTypeScript = styled(IconTypeScript)`
-  fill: ${({ theme }) => theme.colors.secondary};
-  z-index: 1;
-`;
 export const SSymbolGear = styled(SymbolGear)`
   transform: translate(-50%, -50%);
   top: 30%;
