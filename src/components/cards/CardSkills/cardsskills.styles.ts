@@ -8,12 +8,12 @@ import styled from 'styled-components';
 export const SWrapper = styled.div`
   position: relative;
   overflow: hidden;
-  ${flex({ direction: 'column' })}
+  ${flex({ direction: 'column', justify: 'space-between' })}
   width: 100%;
   height: 100%;
-  border: ${({ theme }) => theme.colors.border} solid 1px;
   padding: ${({ theme }) => theme.spaces.medium};
-  gap: ${({ theme }) => theme.spaces.medium};
+  gap: ${({ theme }) => theme.spaces.small};
+  border: ${({ theme }) => theme.colors.border} solid 2px;
   border-radius: ${({ theme }) => theme.borderRadios.medium};
 
   h2 {

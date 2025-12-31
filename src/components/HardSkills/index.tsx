@@ -14,9 +14,9 @@ export default function HardSkills() {
     return (
         <SWrapper>
             <SInfo>
-                <p>Do design ao  deploy</p>
+                <h2>Do design ao  deploy</h2>
                 <h1>Hard Skill</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laudantium voluptatem minus culpa soluta, assumenda odio porro facilis sit et, accusamus necessitatibus doloremque, inventore neque alias! Magnam ea tempora voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laudantium voluptatulpa soluta, assumenda odio porro it et, accusamus necessitatibusue alias! Magnam ea tempora voluptatum.</p>
                 <img src={`${themeValue}BrutalSymbolSkills.png`} alt="símbolo brutalista" />
             </SInfo>
             <SContent>
@@ -30,9 +30,9 @@ export default function HardSkills() {
                                 <SContainerCard>
                                     {
                                         dataSkill.filter(item => item.stack === stack)
-                                        .map(item => (
-                                            <CardSkills key={item.id} {...item} />
-                                        ))
+                                            .map(item => (
+                                                <CardSkills key={item.id} {...item} />
+                                            ))
                                     }
                                 </SContainerCard>
                             </SContainerStack>

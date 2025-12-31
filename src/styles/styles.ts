@@ -1,5 +1,6 @@
 'use client';
 import { createGlobalStyle } from 'styled-components';
+import { fontSubTitle, fontText, fontTitle } from './mixins';
 
 // 🔹 Cria um componente global de estilos
 export const GlobalStyle = createGlobalStyle`
@@ -14,6 +15,18 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     background-color: ${({ theme }) => theme.colors.backgroundBase};
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1 {
+    ${fontTitle({})}
+  }
+
+  h2 {
+    ${fontSubTitle}
+  }
+
+  p, a, li{
+    ${fontText}
   }
 
   a {

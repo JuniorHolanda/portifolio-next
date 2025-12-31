@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
 type FlexProps = {
-  align?: string;
-  justify?: string;
-  direction?: string;
+  align?: 'center' | 'space-around' | 'space-between' | 'space-evenly' | 'flex-start' | 'flex-end';
+  justify?: 'center' | 'space-around' | 'space-between' | 'space-evenly' | 'flex-start' | 'flex-end';
+  direction?: 'column' | 'row';
 };
 
 type TitleProps = {

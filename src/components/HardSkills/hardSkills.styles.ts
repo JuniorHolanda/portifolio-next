@@ -1,6 +1,6 @@
 'use client';
 
-import { flex, fontText, fontTitle } from '@/styles/mixins';
+import { flex, fontSmallText, fontSubTitle, fontText, fontTitle } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.section`
@@ -10,29 +10,39 @@ export const SWrapper = styled.section`
 `;
 
 export const SInfo = styled.div`
+  ${flex({ direction: 'column', align: 'flex-start' })};
+  padding: ${({ theme }) => theme.spaces.large};
+  gap: ${({ theme }) => theme.spaces.medium};
   position: relative;
   overflow: hidden;
-  background-color: ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.spaces.large};
-  ${flex({ direction: 'column', align: 'flex-start' })};
   width: 50%;
   height: 100%;
+  background-color: ${({ theme }) => theme.colors.primary};
 
   h1 {
     ${fontTitle({ size: 'xLarge' })}
+    color: ${({ theme }) => theme.colors.secondary};
     z-index: 1;
     line-height: 150px;
+    margin-bottom: 23px; // corrige o espaço superior que existe da font
+  }
+
+  h2 {
+    ${fontSubTitle}
+    font-style: italic;
   }
 
   p {
     z-index: 1;
-    width: 50%;
+    width: 70%;
+    ${fontSmallText}
   }
 
   img {
     height: 100%;
     position: absolute;
     transform: translateX(50%);
+    right: 0;
     z-index: 0;
   }
 `;
@@ -77,6 +87,7 @@ export const SContainerStack = styled.div`
     ${fontText}
     font-weight: 800;
     text-transform: capitalize;
+    justify-content: fl ;
   }
 `;
 

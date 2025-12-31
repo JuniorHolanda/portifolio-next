@@ -18,7 +18,7 @@ export const lightTheme = {
     textSecondary: '#d9d9d9ff',
     textSecondaryMain: '#f3f3f3',
 
-    border: '#f3f3f3',
+    border: '#d6d6d6ff',
   },
 };
 
