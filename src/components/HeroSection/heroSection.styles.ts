@@ -1,6 +1,6 @@
 'use client';
 
-import { flex, fontSmallText, fontText, fontTitle } from '@/styles/mixins';
+import { flex, fontTitle } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.section`
@@ -49,14 +49,13 @@ export const SContainerSocial = styled.div`
   ${flex({})}
   width: fit-content;
   gap: ${({ theme }) => theme.spaces.small};
-  ${fontText}
   height: fit-content;
 
   .containerIcon {
     ${flex({})};
     height: 100%;
     color: ${({ theme }) => theme.colors.text};
-    font-size: ${({ theme }) => theme.fontSize.small};
+    font-size: ${({ theme }) => theme.textFont.small};
   }
 `;
 
@@ -98,7 +97,6 @@ export const Scontent = styled.div`
     width: 50%;
 
     p {
-      ${fontSmallText}
       z-index: 1;
       min-width: 200px;
       color: ${({ theme }) => theme.colors.text};

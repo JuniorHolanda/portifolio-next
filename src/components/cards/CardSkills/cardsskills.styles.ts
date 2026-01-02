@@ -1,8 +1,7 @@
 'use client';
 
-import IconTypeScript from '@/components/shared/icons/SvgTypeScript';
 import SymbolGear from '@/components/shared/symbols/SvgGear';
-import { flex, fontSmallText, fontSubTitle } from '@/styles/mixins';
+import { flex, fontText, fontTitle } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.div`
@@ -16,35 +15,42 @@ export const SWrapper = styled.div`
   border: ${({ theme }) => theme.colors.border} solid 2px;
   border-radius: ${({ theme }) => theme.borderRadios.medium};
 
-  h2 {
+  h3 {
     z-index: 1;
-    ${fontSubTitle};
+    ${fontTitle({ size: 'microSmall', transform: 'lowercase', sub: true })};
     color: ${({ theme }) => theme.colors.secondary};
   }
 
   p {
+    ${fontText({ size: 'microSmall' })}
     z-index: 1;
-    ${fontSmallText}
   }
 `;
 export const SContainerAction = styled.div`
   ${flex({ justify: 'flex-start' })}
+  gap: ${({ theme }) => theme.spaces.small};
   z-index: 1;
   width: 100%;
+  height: fit-content;
 
   div {
-    ${flex({})}
-    width: 60%;
     ${flex({ justify: 'flex-start' })}
+    gap: ${({ theme }) => theme.spaces.small};
+    width: 100%;
     height: 100%;
+
+    p {
+      ${fontText({ size: 'microSmall', weight: '600', style: 'italic' })}
+    }
   }
 
   button {
-    ${flex({})}
-    width: 40%;
     ${flex({ justify: 'space-between' })}
-    justify-content: space-between;
+    width: auto;
     height: 100%;
+    gap: ${({ theme }) => theme.spaces.small};
+    ${fontText({ size: 'microSmall', weight: '800' })}
+    color: ${({ theme }) => theme.colors.secondary};
 
     .icon {
       font-size: 2em;
@@ -54,7 +60,7 @@ export const SContainerAction = styled.div`
 `;
 
 export const ScontainerIcon = styled.span`
-  ${flex({})}
+  ${flex({ align: 'flex-start' })}
   z-index: 1;
   width: 100%;
   height: fit-content;

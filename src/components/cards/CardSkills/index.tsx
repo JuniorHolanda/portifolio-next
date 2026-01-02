@@ -33,17 +33,16 @@ export default function CardSkills({ ...props }: CardSkillsProps) {
                 }
             </ScontainerIcon>
             <SContent>
-                <h2>{props.skill}</h2>
+                <h3>{props.skill}</h3>
                 <p>{props.description}</p>
             </SContent>
             <SContainerAction>
                 <div>
-                    <FaStarOfLife />
                     <p>{`${allcertification} ${allcertification > 0 ? 'certificados' : 'certificado'}`}</p>
                 </div>
                 <button>
                     <FaArrowRight />
-                    <GiDiploma className="icon" />
+                    ver
                 </button>
             </SContainerAction>
         </SWrapper>

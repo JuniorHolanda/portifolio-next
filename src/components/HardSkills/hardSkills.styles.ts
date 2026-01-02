@@ -1,6 +1,6 @@
 'use client';
 
-import { flex, fontSmallText, fontSubTitle, fontText, fontTitle } from '@/styles/mixins';
+import { flex, fontTitle } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.section`
@@ -28,14 +28,13 @@ export const SInfo = styled.div`
   }
 
   h2 {
-    ${fontSubTitle}
+    ${fontTitle({ size: 'medium' })}
     font-style: italic;
   }
 
   p {
     z-index: 1;
     width: 70%;
-    ${fontSmallText}
   }
 
   img {
@@ -78,16 +77,13 @@ export const SContainerStack = styled.div`
 
   header {
     ${flex({ justify: 'flex-start' })}
-    height: fit-content;
+    padding: ${({ theme }) => theme.spaces.medium};
     width: 100%;
     height: 8vh;
-    padding: ${({ theme }) => theme.spaces.medium};
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.secondary};
-    ${fontText}
+    ${fontTitle({ size: 'small', transform: 'uppercase', sub: true })};
     font-weight: 800;
-    text-transform: capitalize;
-    justify-content: fl ;
+    color: ${({ theme }) => theme.colors.secondary};
+    background-color: ${({ theme }) => theme.colors.primary};
   }
 `;
 

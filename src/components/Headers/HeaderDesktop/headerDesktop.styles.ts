@@ -1,4 +1,4 @@
-import { flex, fontSmallText, fontText } from '@/styles/mixins';
+import { flex } from '@/styles/mixins';
 import styled from 'styled-components';
 // flex({}) → vazio é default = align: center / justfy: center / direction: row
 
@@ -18,7 +18,6 @@ export const SHeader = styled.header`
 
 export const SContainerLogo = styled.span`
   ${flex({ justify: 'flex-start' })}
-  ${fontText}
   font-weight: 800;
   text-transform: uppercase;
   font-style: italic;
@@ -35,7 +34,6 @@ export const SNav = styled.nav`
     ${flex({ justify: 'space-around' })}
     width: 100%;
     gap: ${({ theme }) => theme.spaces.medium};
-    ${fontSmallText}
     font-weight: 400;
     text-transform: uppercase;
 
@@ -52,7 +50,6 @@ export const SContainerSocial = styled.div`
   ${flex({})}
   width: fit-content;
   gap: ${({ theme }) => theme.spaces.small};
-  ${fontText}
   height: 100%;
 
   .containerIcon {
