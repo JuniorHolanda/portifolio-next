@@ -2,12 +2,14 @@ import styled, { css } from 'styled-components';
 
 type FlexProps = {
   align?: 'center' | 'space-around' | 'space-between' | 'space-evenly' | 'flex-start' | 'flex-end';
-  justify?: 'center' | 'space-around' | 'space-between' | 'space-evenly' | 'flex-start' | 'flex-end';
+  justify?:
+    | 'center'
+    | 'space-around'
+    | 'space-between'
+    | 'space-evenly'
+    | 'flex-start'
+    | 'flex-end';
   direction?: 'column' | 'row';
-};
-
-type TitleProps = {
-  size?: 'xLarge' | 'large';
 };
 
 export const flex = ({ align = 'center', justify = 'center', direction = 'row' }: FlexProps) => css`
@@ -17,23 +19,41 @@ export const flex = ({ align = 'center', justify = 'center', direction = 'row' }
   flex-direction: ${direction};
 `;
 
-export const fontTitle = ({ size = 'large' }: TitleProps) => css`
-  font-family: var(--font-title);
-  font-size: ${({ theme }) => theme.fontSize[size]};
-  text-transform: uppercase;
+type TitleProps = {
+  size?: 'microSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+  transform?: 'uppercase' | 'none' | 'lowercase';
+  sub?: boolean; // true = font principal | false = font secundária
+  style?: 'italic' | 'normal';
+};
+
+export const fontTitle = ({
+  size = 'large',
+  transform = 'uppercase',
+  sub = false,
+  style = 'normal',
+}: TitleProps) => css`
+  font-family: ${sub ? 'var(--font-text)' : 'var(--font-title)'};
+  font-size: ${({ theme }) => theme.titleFont[size]};
+  text-transform: ${transform};
+  font-style: ${style};
 `;
 
-export const fontSubTitle = css`
-  font-family: var(--font-text);
-  font-size: ${({ theme }) => theme.fontSize.small};
-  text-transform: uppercase;
-`;
+type TextProps = {
+  size?: 'microSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+  transform?: 'uppercase' | 'none' | 'lowercase';
+  weight?: '100' | '200' | '300' | '600' | '800';
+  style?: 'italic' | 'normal';
+};
 
-export const fontText = css`
+export const fontText = ({
+  size = 'small',
+  transform,
+  weight = '300',
+  style = 'normal',
+}: TextProps) => css`
   font-family: var(--font-text);
-  font-size: ${({ theme }) => theme.fontSize.small};
-`;
-export const fontSmallText = css`
-  font-family: var(--font-text);
-  font-size: ${({ theme }) => theme.fontSize.microSmall};
+  font-size: ${({ theme }) => theme.textFont[size]};
+  text-transform: ${transform};
+  font-weight: ${weight};
+  font-style: ${style};
 `;

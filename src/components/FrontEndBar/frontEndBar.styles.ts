@@ -1,5 +1,5 @@
 import { scrollUpInfinity } from '@/styles/animations';
-import { flex, fontSmallText } from '@/styles/mixins';
+import { flex, fontText } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SFrontEndBar = styled.span`
@@ -10,11 +10,11 @@ export const SFrontEndBar = styled.span`
   animation: ${scrollUpInfinity} 20s linear infinite;
 
   span {
-    ${fontSmallText}
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.primary};
     font-style: italic;
     transform: rotate(-90deg);
     white-space: nowrap;
+    ${fontText({ size: 'small' })}
   }
 `;
