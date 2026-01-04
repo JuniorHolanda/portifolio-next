@@ -67,9 +67,9 @@ export const SContainerFrontEndBar = styled.div`
 `;
 
 export const Scontent = styled.div`
-  padding: ${({ theme }) => theme.spaces.large};
-  ${flex({ align: 'flex-start', direction: 'column' })}
   position: relative;
+  ${flex({ align: 'flex-start', justify: 'space-between' })}
+  padding: ${({ theme }) => theme.spaces.xLarge};
   height: 100vh;
   width: 75%;
   overflow: hidden;
@@ -83,6 +83,12 @@ export const Scontent = styled.div`
     left: 60%;
     z-index: 0;
   }
+`;
+
+export const SText = styled.div`
+  ${flex({ direction: 'column', justify: 'center', align: 'flex-start' })}
+  width: 70%;
+  z-index: 1;
 
   h1,
   h2 {
@@ -92,15 +98,17 @@ export const Scontent = styled.div`
   }
 
   div {
-    ${flex({ direction: 'column' })}
+    ${flex({ direction: 'column', justify: 'center', align: 'flex-start' })}
     gap: ${({ theme }) => theme.spaces.medium};
-    width: 50%;
+    width: 100%;
+    z-index: 1;
 
     p {
       z-index: 1;
       min-width: 200px;
       color: ${({ theme }) => theme.colors.text};
       margin-left: ${({ theme }) => theme.spaces.medium};
+      width: 70%;
 
       strong {
         background-color: ${({ theme }) => theme.colors.primary};
