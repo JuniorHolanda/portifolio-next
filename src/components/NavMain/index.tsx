@@ -1,4 +1,3 @@
-import { IoIosArrowDown } from "react-icons/io";
 import { SWrapper } from "./navmain.styles";
 import { SlArrowDown } from "react-icons/sl";
 

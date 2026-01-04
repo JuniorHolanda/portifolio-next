@@ -6,11 +6,15 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useThemeContext } from "@/hooks/useThemeContext";
 import FrontEndBar from "../FrontEndBar";
 import NavMain from "../NavMain";
+import { useViewport } from "@/hooks/useViewport";
+import MenuHamburger from "../MenuHamburger";
 
 export default function HeroSection() {
 
-    //usa o valor light ou dark para alterar a imagem renderizada
     const theme = useThemeContext();
+    const viewPort = useViewport();
+
+
 
     console.log(theme.themeMode)
 
@@ -60,8 +64,7 @@ export default function HeroSection() {
                     </h2>
                 </SText>
                 <img src={`${theme.themeMode}BrutalSymbolBg.png`} alt="um símbolo abstrato brtalista amarelo" />
-
-                <NavMain />
+                {viewPort !== 'lg' && viewPort !== null ? <MenuHamburger /> : <NavMain />}
             </Scontent>
         </SWrapper>
     )
