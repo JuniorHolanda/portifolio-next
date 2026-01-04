@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Tac_One, JetBrains_Mono } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/registry';
 import { ThemeProviderWrapper } from '@/providers/ThemeProvider';
-import HeaderDesktop from '@/components/Headers/HeaderDesktop';
+import HeaderController from '@/components/Headers/HeaderController';
 
 const jetBrains = JetBrains_Mono({
   variable: '--font-text',
@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={`${jetBrains.variable} ${tacOne.variable}`}>
         <StyledComponentsRegistry>
           <ThemeProviderWrapper>
-            <HeaderDesktop />
+            <HeaderController />
             {children}
           </ThemeProviderWrapper>
         </StyledComponentsRegistry>

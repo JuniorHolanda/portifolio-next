@@ -15,7 +15,7 @@ export const defaultTheme = {
   textFont: {
     microSmall: 'clamp(0.7rem, 0.7rem, 1rem)',
     small: 'clamp(0.5rem, 1rem, 1.3rem)',
-    medium: 'clamp(1rem, 2vw, 2rem)',
+    medium: 'clamp(1rem, 3vw, 2rem)',
     large: 'clamp(2rem, 4vw, 4rem)',
     xLarge: 'clamp(5rem, 12vw, 20rem)',
   },

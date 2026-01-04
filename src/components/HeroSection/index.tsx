@@ -5,14 +5,10 @@ import { SAside, SContainerFrontEndBar, ScontainerImg, ScontainerProfile, SConta
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useThemeContext } from "@/hooks/useThemeContext";
 import FrontEndBar from "../FrontEndBar";
-import NavMain from "../NavMain";
 
 export default function HeroSection() {
 
-    //usa o valor light ou dark para alterar a imagem renderizada
     const theme = useThemeContext();
-
-    console.log(theme.themeMode)
 
     return (
         <SWrapper>
@@ -60,8 +56,6 @@ export default function HeroSection() {
                     </h2>
                 </SText>
                 <img src={`${theme.themeMode}BrutalSymbolBg.png`} alt="um símbolo abstrato brtalista amarelo" />
-
-                <NavMain />
             </Scontent>
         </SWrapper>
     )
