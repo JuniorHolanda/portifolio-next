@@ -53,7 +53,7 @@ export const SContainerAction = styled.div`
     color: ${({ theme }) => theme.colors.secondary};
 
     .icon {
-      font-size: 2em;
+      font-size: ${({ theme }) => theme.textFont.medium};
       color: ${({ theme }) => theme.colors.primary};
     }
   }
