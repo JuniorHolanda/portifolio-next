@@ -1,6 +1,6 @@
 'use client';
 
-import { flex, fontTitle } from '@/styles/mixins';
+import { flex, fontTitle, gap, padding } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.section`
@@ -25,8 +25,8 @@ export const ScontainerProfile = styled.div`
   ${flex({ direction: 'column' })};
   width: 60%;
   height: 40%;
-  gap: ${({ theme }) => theme.spaces.medium};
-  padding: ${({ theme }) => theme.spaces.medium};
+  ${gap({ space: 'medium' })}
+  ${padding({ space: 'medium' })}
   background-color: ${({ theme }) => theme.colors.backgroundSurface};
   border-radius: ${({ theme }) => theme.borderRadios.medium};
 `;
@@ -48,7 +48,7 @@ export const ScontainerImg = styled.div`
 export const SContainerSocial = styled.div`
   ${flex({})}
   width: fit-content;
-  gap: ${({ theme }) => theme.spaces.small};
+  ${gap({ space: 'small' })}
   height: fit-content;
 
   .containerIcon {
@@ -69,7 +69,7 @@ export const SContainerFrontEndBar = styled.div`
 export const Scontent = styled.div`
   position: relative;
   ${flex({ align: 'flex-start', justify: 'space-between' })}
-  padding: ${({ theme }) => theme.spaces.xLarge};
+  ${padding({ space: 'xLarge' })}
   height: 100vh;
   width: 75%;
   overflow: hidden;
@@ -99,7 +99,7 @@ export const SText = styled.div`
 
   div {
     ${flex({ direction: 'column', justify: 'center', align: 'flex-start' })}
-    gap: ${({ theme }) => theme.spaces.medium};
+    ${gap({ space: 'medium' })}
     width: 100%;
     z-index: 1;
 

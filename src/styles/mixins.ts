@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import { defaultTheme } from '@/themes/defaultTheme';
+import { css } from 'styled-components';
 
 type FlexProps = {
   align?: 'center' | 'space-around' | 'space-between' | 'space-evenly' | 'flex-start' | 'flex-end';
@@ -20,7 +21,7 @@ export const flex = ({ align = 'center', justify = 'center', direction = 'row' }
 `;
 
 type TitleProps = {
-  size?: 'microSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+  size?: keyof typeof defaultTheme.titleFont;
   transform?: 'uppercase' | 'none' | 'lowercase';
   sub?: boolean; // true = font principal | false = font secundária
   style?: 'italic' | 'normal';
@@ -39,7 +40,7 @@ export const fontTitle = ({
 `;
 
 type TextProps = {
-  size?: 'microSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+  size?: keyof typeof defaultTheme.textFont;
   transform?: 'uppercase' | 'none' | 'lowercase';
   weight?: '100' | '200' | '300' | '600' | '800';
   style?: 'italic' | 'normal';
@@ -56,4 +57,16 @@ export const fontText = ({
   text-transform: ${transform};
   font-weight: ${weight};
   font-style: ${style};
+`;
+
+type spacesProps = {
+  space?: keyof typeof defaultTheme.spaces;
+};
+
+export const padding = ({ space = 'medium' }: spacesProps) => css`
+  padding: ${({ theme }) => theme.spaces[space]};
+`;
+
+export const gap = ({ space = 'medium' }: spacesProps) => css`
+  gap: ${({ theme }) => theme.spaces[space]};
 `;

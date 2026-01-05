@@ -1,12 +1,10 @@
-'use client';
 
-import { useThemeContext } from "@/hooks/useThemeContext";
-import { SContainerLogo, SContainerSocial, SContainerTheme, SHeader, SNav } from "./headerDesktop.styles";
-import { FaGithub, FaLinkedin, FaMoon, FaSun, FaWhatsapp } from "react-icons/fa";
+import { SContainerLogo, SContainerSocial, SHeader, SNav } from "./headerDesktop.styles";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import ButtomThemeMode from "@/components/ButtomThemeMode";
 
 export default function HeaderDesktop() {
-    const { themeMode, toggleTheme } = useThemeContext()
 
     return (
         <SHeader>
@@ -21,6 +19,7 @@ export default function HeaderDesktop() {
                     <li>Contatos</li>
                 </ul>
             </SNav>
+            
             <SContainerSocial>
                 <Link href={'#'} className="containerIcon">
                     <FaGithub />
@@ -32,12 +31,7 @@ export default function HeaderDesktop() {
                     <FaWhatsapp />
                 </Link>
             </SContainerSocial>
-            <SContainerTheme $toggle={themeMode}>
-                <label htmlFor="checkTheme"></label>
-                <input type="checkbox" id="checkTheme" onClick={toggleTheme} />
-                <FaSun className="containerIconSun" />
-                <FaMoon className="containerIconMoon" />
-            </SContainerTheme>
+            <ButtomThemeMode />
         </SHeader>
     );
 }
