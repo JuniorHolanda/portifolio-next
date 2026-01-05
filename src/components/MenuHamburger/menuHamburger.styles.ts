@@ -1,6 +1,6 @@
 'use client';
 
-import { flex } from '@/styles/mixins';
+import { flex, gap, padding } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.section`
@@ -10,7 +10,7 @@ export const SWrapper = styled.section`
   z-index: 10;
 
   ${flex({ direction: 'column', align: 'flex-end', justify: 'flex-start' })}
-  padding: ${({ theme }) => theme.spaces.large};
+  ${padding({ space: 'large' })}
   width: 30vw;
   height: 100vw;
 
@@ -18,7 +18,6 @@ export const SWrapper = styled.section`
     font-size: ${({ theme }) => theme.textFont.medium};
   }
 `;
-
 export const SContentMenu = styled.div`
   position: fixed;
   top: 0;
@@ -29,19 +28,24 @@ export const SContentMenu = styled.div`
   height: 100dvh;
   background-color: #ffffff41;
   backdrop-filter: blur(30px);
-  padding: ${({ theme }) => theme.spaces.large};
+  ${padding({ space: 'medium' })}
+`;
+
+export const SIcon = styled.div`
+  ${flex({})}
+  ${padding({ space: 'small' })}
+  ${gap({ space: 'medium' })}
 `;
 
 export const SContainerSocial = styled.div`
   ${flex({})}
+  ${gap({ space: 'medium' })}
   width: fit-content;
-  gap: ${({ theme }) => theme.spaces.small};
   height: 100%;
-  gap: ${({ theme }) => theme.spaces.medium};
 
   .containerIcon {
     ${flex({})};
-    padding: ${({ theme }) => theme.spaces.small};
+    ${padding({ space: 'small' })}
     height: fit-content;
     font-size: ${({ theme }) => theme.textFont.medium};
   }

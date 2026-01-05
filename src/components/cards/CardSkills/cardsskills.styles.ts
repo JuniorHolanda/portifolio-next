@@ -1,7 +1,7 @@
 'use client';
 
 import SymbolGear from '@/components/shared/symbols/SvgGear';
-import { flex, fontText, fontTitle } from '@/styles/mixins';
+import { flex, fontText, fontTitle, gap, padding } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.div`
@@ -10,8 +10,8 @@ export const SWrapper = styled.div`
   ${flex({ direction: 'column', justify: 'space-between' })}
   width: 100%;
   height: 100%;
-  padding: ${({ theme }) => theme.spaces.medium};
-  gap: ${({ theme }) => theme.spaces.small};
+  ${padding({ space: 'medium' })}
+  ${gap({ space: 'small' })}
   border: ${({ theme }) => theme.colors.border} solid 2px;
   border-radius: ${({ theme }) => theme.borderRadios.medium};
 
@@ -28,14 +28,14 @@ export const SWrapper = styled.div`
 `;
 export const SContainerAction = styled.div`
   ${flex({ justify: 'flex-start' })}
-  gap: ${({ theme }) => theme.spaces.small};
+  ${gap({space:'small'})};
   z-index: 1;
   width: 100%;
   height: fit-content;
 
   div {
     ${flex({ justify: 'flex-start' })}
-    gap: ${({ theme }) => theme.spaces.small};
+    ${gap({space:'small'})};
     width: 100%;
     height: 100%;
 
@@ -48,7 +48,7 @@ export const SContainerAction = styled.div`
     ${flex({ justify: 'space-between' })}
     width: auto;
     height: 100%;
-    gap: ${({ theme }) => theme.spaces.small};
+    ${gap({space:'small'})};
     ${fontText({ size: 'microSmall', weight: '800' })}
     color: ${({ theme }) => theme.colors.secondary};
 

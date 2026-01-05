@@ -1,6 +1,6 @@
 'use client';
 
-import { flex, fontTitle } from '@/styles/mixins';
+import { flex, fontTitle, gap, padding } from '@/styles/mixins';
 import styled from 'styled-components';
 
 export const SWrapper = styled.section`
@@ -11,8 +11,9 @@ export const SWrapper = styled.section`
 
 export const SInfo = styled.div`
   ${flex({ direction: 'column', align: 'flex-start' })};
-  padding: ${({ theme }) => theme.spaces.large};
-  gap: ${({ theme }) => theme.spaces.medium};
+  ${padding({ space: 'large' })}
+
+  ${gap({ space: 'small' })};
   position: relative;
   overflow: hidden;
   width: 50%;
@@ -50,15 +51,15 @@ export const SContent = styled.div`
   ${flex({})};
   width: 50%;
   height: 100%;
-  padding: ${({ theme }) => theme.spaces.large};
+  ${padding({ space: 'large' })};
 `;
 
 export const SContainerSkills = styled.div`
   ${flex({ direction: 'column', justify: 'flex-start' })};
   width: 100%;
   height: 100%;
-  padding: ${({ theme }) => theme.spaces.large};
-  gap: ${({ theme }) => theme.spaces.large};
+  ${padding({ space: 'large' })};
+  ${gap({ space: 'large' })}
   overflow: auto;
   background-color: ${({ theme }) => theme.colors.backgroundMedium};
   border-radius: ${({ theme }) => theme.borderRadios.large};
@@ -77,7 +78,7 @@ export const SContainerStack = styled.div`
 
   header {
     ${flex({ justify: 'flex-start' })}
-    padding: ${({ theme }) => theme.spaces.medium};
+    ${padding({ space: 'medium' })}
     width: 100%;
     height: 8vh;
     ${fontTitle({ size: 'small', transform: 'uppercase', sub: true })};
@@ -90,7 +91,7 @@ export const SContainerStack = styled.div`
 export const SContainerCard = styled.div`
   display: grid;
   grid-template: auto / 1fr 1fr 1fr;
-  padding: ${({ theme }) => theme.spaces.medium};
-  gap: ${({ theme }) => theme.spaces.medium};
+  ${padding({ space: 'medium' })}
+  ${gap({ space: 'medium' })};
   height: 100%;
 `;
