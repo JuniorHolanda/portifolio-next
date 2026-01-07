@@ -1,9 +1,14 @@
 import { SWrapper } from "./navmain.styles";
 import { SlArrowDown } from "react-icons/sl";
 
-export default function NavMain() {
+type NavMainProps = {
+  width?: string
+  align?: 'flex-end' | 'center'
+}
+
+export default function NavMain({ width = '30%', align = 'flex-end' }: NavMainProps) {
   return (
-    <SWrapper>
+    <SWrapper $align={align} $width={width}  >
       <nav>
         <SlArrowDown className="arrowElementVisual" />
         <ul>

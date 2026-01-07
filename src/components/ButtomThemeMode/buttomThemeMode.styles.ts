@@ -11,7 +11,7 @@ export const SContainerTheme = styled.div<SContainerThemeProps>`
   position: relative;
   ${flex({})}
   width: 60px;
-  height: 40px;
+  height: 31px;
   overflow: hidden;
   border-radius: ${({ theme }) => theme.borderRadios.large};
   border: solid #00000062 1px;

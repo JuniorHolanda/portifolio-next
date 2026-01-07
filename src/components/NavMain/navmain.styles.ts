@@ -1,10 +1,15 @@
-import { flex, fontText } from '@/styles/mixins';
+import { flex, fontText, gap } from '@/styles/mixins';
 import styled from 'styled-components';
 
-export const SWrapper = styled.section`
-  ${flex({ align: 'flex-end', justify: 'flex-end' })};
+type SwrapperProps = {
+  $width: string;
+  $align: 'flex-end' | 'center';
+};
+
+export const SWrapper = styled.section<SwrapperProps>`
+  ${({ $align }) => flex({ align: $align, justify: 'flex-end' })}
   text-align: end;
-  width: 30%;
+  width: ${({ $width }) => $width};
   height: 100%;
   z-index: 1;
 

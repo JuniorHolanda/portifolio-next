@@ -5,10 +5,15 @@ import { SAside, SContainerFrontEndBar, ScontainerImg, ScontainerProfile, SConta
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useThemeContext } from "@/hooks/useThemeContext";
 import FrontEndBar from "../FrontEndBar";
+import NavMain from "../NavMain";
+import { useViewport } from "@/hooks/useViewport";
 
 export default function HeroSection() {
 
     const theme = useThemeContext();
+    const viewPort = useViewport();
+
+    const showNavMenu = viewPort === 'lg' || viewPort === null;
 
     return (
         <SWrapper>
@@ -56,6 +61,9 @@ export default function HeroSection() {
                     </h2>
                 </SText>
                 <img src={`${theme.themeMode}BrutalSymbolBg.png`} alt="um símbolo abstrato brtalista amarelo" />
+                {
+                    showNavMenu && <NavMain />
+                }
             </Scontent>
         </SWrapper>
     )
