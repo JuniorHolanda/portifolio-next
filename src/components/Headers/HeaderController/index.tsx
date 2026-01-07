@@ -10,8 +10,7 @@ export default function HeaderController() {
 
     return (
         <>
-            {viewport === 'lg' && <HeaderDesktop />}
-            {viewport !== 'lg' && viewport !== null && <MenuHamburger />}
+            {viewport === 'lg' || viewport === null ? <HeaderDesktop /> : <MenuHamburger />}
         </>
     )
 }

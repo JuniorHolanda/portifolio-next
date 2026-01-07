@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes, css } from 'styled-components';
 
 export const scrollUpInfinity = keyframes`
     from {
@@ -6,5 +6,15 @@ export const scrollUpInfinity = keyframes`
     }
     to {
         transform: translateY(-100%);
+    }
+`;
+
+export const slidToLeft = keyframes`
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 `;

@@ -68,7 +68,7 @@ export const SContainerFrontEndBar = styled.div`
 
 export const Scontent = styled.div`
   position: relative;
-  ${flex({ align: 'flex-start', justify: 'space-between' })}
+  ${flex({ align: 'center', justify: 'space-between' })}
   ${padding({ space: 'xLarge' })}
   height: 100vh;
   width: 75%;
